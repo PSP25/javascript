@@ -27,7 +27,7 @@ const arr2=["hi","die","fly","kai","tie"]
 console.log(Array.isArray("Hitesh"))
 console.log(Array.from("Hitesh"))
 console.log(Array.from({name: "hitesh"})) // interesting
-
+console.log(Array.from([1,2,3,4,5,6,7,8],(x)=>(x+x)))
 let score1 = 100
 let score2 = 200
 let score3 = 300
