@@ -71,7 +71,7 @@ const users = [
 // console.log(obj3.hasOwnProperty('loggedin'))
 // console.log(obj3.hasOwnProperty('id'))
 
-////object destructuringn
+////object destructuring
 const course = {
     coursename: "js in hindi",
     price: "9990",
@@ -82,12 +82,15 @@ const {courseInstructor:coach}=course;//changed the long name to shorter//used i
 console.log(coach);
 
 //JSON files for API (Java Script Object Notation)
+//dont worry about this part
+
 // {
 //     "name": "hitesh",
 //     "coursename": "js in hindi",
 //     "price": "free"
-// }
+// }//keys are strings so always in " "
 
+//API as array of objects
 [
     {},
     {},
