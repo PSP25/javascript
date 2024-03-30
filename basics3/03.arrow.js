@@ -1,3 +1,12 @@
+//arrow functions, this binding, regular function
+//learn the key differences between arrow vs regular
+//1.this binding difference
+//2.arguments difference
+//3.use of new keyword (constructable vs callable)
+//the arrow functions are only ‘callable’ and not constructible.
+
+
+
 const user = {
     username: "hitesh",
     price: 999,
@@ -11,12 +20,13 @@ const user = {
 // user.username="sam";
 // user.welcomeMessage();
 
-// console.log(this);//prints empty object as no global object available
-                 //same command would print window in console as it has global object 'window'
+// console.log(this);   //prints empty object as no global object available
+                    //same command would print window in console as it has global object 'window'
 
 // function chai(){
 //    let username = "hitesh"
-//     console.log(this);              //gives a similar result to what browser console gives on printing this
+//console.log(this);
+    //gives a similar result to what browser console gives on printing this
 //     //console.log(this.username);    // this.xxx cannot do anything in function
 // }
 

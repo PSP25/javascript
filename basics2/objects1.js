@@ -4,14 +4,14 @@
 const sym=Symbol("mynum1");
 
 //2 methods of declaration
-//object literal        //can give any data type
+//object literal        //you can give any data type
 
 const obj1={
     name:"kai",
-    "full name":"kai hiwatari",//keys are always stings so tke "" if using space separated literals
+    "full name":"kai hiwatari",//keys are always stings so take "" if using space separated literals
     mail:"kai@gmail.com",
     age:18,
-    [sym]:"key1",
+    [sym]:"key1",//cant declare here,you have to create it outside and call it here
     location: "jaipur",
     is_logged_in: false,
     last_login: ["monday","tuesday"]
@@ -21,10 +21,11 @@ console.log(obj1.mail);
 console.log(obj1.age);
 
 // "." operator fails in many cases
+//use []operator, but inside it everything except symbol is called by " " operator
 console.log(obj1.sym); //gives undefined
 console.log(obj1[sym]);
-console.log(obj1.location);
-console.log(obj1["full name"]);
+console.log(obj1.location);//works okay
+console.log(obj1["full name"]);//(.) operator wont work
 
 //change values in object
 obj1.location="delhi";

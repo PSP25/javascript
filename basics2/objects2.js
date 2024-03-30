@@ -1,6 +1,8 @@
 ////constructor method of declaration
 // const obj2= new Object();
 // console.log(obj2);
+
+
 const obj3={};
 
 obj3.id="abc123";
@@ -32,6 +34,7 @@ const obj5 = {5: "a", 6: "b"}
 
 const fobj={obj1,obj2,obj3};//doesn't give the desired result
 // console.log(fobj);
+
 const assignobj= Object.assign(obj1,obj2,obj5);//returns a new obj , better to use ({},obj1,obj2,obj3)
 // console.log(assignobj);
 
