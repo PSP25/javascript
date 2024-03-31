@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>DOM| additon,edit remove</title>
+</head>
+<body style="background-color: black; color: white;"> 
+   <div>
+    <ul class="list"> 
+        <li>java script</li>
+    </ul>
+   </div> 
+</body>
+<script>
+                //creating function to add a list into the ul
+                    //create->add_things->appendchild
+    // function addlist(lang){
+    //     const li=document.createElement('li');
+    //     li.innerHTML=`${lang}`;
+    //    document.querySelector('.list').appendChild(li);
+    // };addlist('python');
+    //this method is good but is basic
+    //disadv: innerHTML traverses the whole list and then adds the lang
+    // here there was only one lang previously, but in large databases it is not feasible
+
+    //solution
+    function newadd(lang){
+        const li=document.createElement('li');
+        //use the 2nd method of adding text as shown in the prev html file last 
+        //textnode style
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.list').appendChild(li)
+    }
+    newadd('golang');
+    newadd('c++');
+    newadd('python');
+
+                    //editing the values present
+                            //select->create_new_element->replacewith/replacechild etc
+    //edit1(way1,way2)
+    const editlang=document.querySelector("li:nth-child(2)")
+    // editlang.innerHTML='mojo';   //1st way but not efficient
+    const newli=document.createElement('li')
+    newli.textContent='mojo'
+    editlang.replaceWith(newli)
+
+    //edit2(way3)[editing the complete outer HTML]
+    const firstl=document.querySelector("li:first-child")
+    firstl.outerHTML="<li>typescript</li>"
+
+
+//removing an element
+const r=document.querySelector("li:last-child")
+r.remove()
+</script>
+</html>
