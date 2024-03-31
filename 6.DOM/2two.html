@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <!-- hello this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>  
+</div>  
+</body>
+<script>
+   const parents= document.querySelector('.parent')
+//    console.log(parents);//gives the elements in parent
+//    console.log(parents.children);//gives HTMLcollections
+            //you can apply alll collection methods in prototype
+    // console.log(parents.children[0]);
+    //general loop can work but special loops only work if 
+    //you convert it to array
+    for (let i = 0; i < parents.children.length; i++) {
+        // console.log(parents.children[i].style.color="green");    
+    }
+
+    console.log(parents.firstElementChild);
+    // console.log(parents.lastElementChild);
+
+//get parent and sibling
+
+    // const dayone=document.querySelector('.day')
+    // console.log(dayone.parentElement)
+    // console.log(dayone.nextElementSibling)
+
+//getting all the child Nodes
+//Nodes not only contains element but also breaks,comments etc
+console.log(parents.childNodes)//9 nodes but we have only 4 elements
+//it takes into account the breaks
+
+
+</script>
+</html>

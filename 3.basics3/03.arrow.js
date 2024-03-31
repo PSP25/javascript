@@ -53,7 +53,7 @@ const sum2=(num1,num2)=> ( num1+num2)
                         //dont need to use the return statement for one liner codes
                         //use parenthesis instead
                         
-// const obj=()=>{username:"jitesh",id="123asd"}//other codes might run withour parenthesis
+// const obj=()=>{username:"jitesh",id="123asd"}//other codes might run without parenthesis
                                                 //this wont work as it thinks braces as block opener
                                                 //use parenthesis to clarify
 const obj=()=>({username:"jitesh",id:"123asd"})
