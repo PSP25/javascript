@@ -38,9 +38,9 @@ const chai=()=>{        //no need to use the tag (function)
     console.log(this); //doesnot work in arrow function,but works in the general function
     //console.log(this.username);//cannot print anything 
 }
-chai()  //arrow function 
+chai()  
 
-
+//arrow function 
 const sum=(num1,num2)=>{
     return num1+num2;
 }
