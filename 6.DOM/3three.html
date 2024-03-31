@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM3 creation of element</title>
+</head>
+<body style="background-color: black; color: white;">
+    //you can create new elements and give them attributes
+<script>
+    const newel=document.createElement('div')
+    console.log(newel) 
+    newel.className="newdiv"
+    newel.id='abc123'
+    newel.setAttribute("title","division")//five key value pair
+    newel.style.padding="15px"
+    newel.style.backgroundColor='green'
+    newel.innerText="hello kai"//this is good 
+    //alter method
+    const txt=document.createTextNode("hellokai")
+    newel.appendChild(txt)
+    //this chages are in memory so not in page
+    //attach it
+
+    document.body.appendChild(newel)
+    
+</script>
+
+</body>
+</html>
