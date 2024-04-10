@@ -1,122 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html Events</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html Events </title>
-</head>
-
-<body id="body" style="background-color: #414141; color: aliceblue;">
+  <body id="body" style="background-color: #414141; color: aliceblue">
     <h2>Amazing image</h2>
     <div>
-        <ul id="images">
-            <li><img width="200px" id="photoshop"
-                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-                    alt="photoshop"></li>
-            <li><img width="200px" id="japan"
-                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-                    alt=""></li>
-            <li><img width="200px" id="river"
-                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-                    alt=""></li>
-            <li><img width="200px" id="owl"
-                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-                    alt=""></li>
-            <li><img width="200px" id="prayer"
-                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-                    alt=""></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
-        </ul>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
     </div>
     <div class="print"></div>
-</body>
+  </body>
 
-<script>
- //basic
-    const owl = document.getElementById('owl');
+  <script>
+    //basic
+    const owl = document.getElementById("owl");
     //    method 2 for checking event
-    //    owl.onclick=function(){
-    //     alert('owl was slected');
+    //    owl.onclick=function(event){
+    //     alert('owl was slected')
+    //     console.log(event.target);
     //    }
 
-//using preventdefault()
-    const link = document.getElementById('google')
+    //using preventdefault()
+    const link = document.getElementById("google");
     link.onclick = function (event) {
-        event.preventDefault();
-    }
-//most used method for event listener
-    owl.addEventListener('click',(e)=>{
-        //gives an object and its properties
-        console.log(e);
-    })
-//use of some of its properties
+      event.preventDefault();
+    };
+
+    //most used method for event listener
+    owl.addEventListener("click", (e) => {
+      //gives an object and its properties
+      // console.log(e);
+    });
+
+    //use of some of its properties
     //target,current target(look notebook)
-    owl.addEventListener('click', (e) => {
-        //gives an object and its properties
-        //console.log(e.target.tagName);
-        //console.log(e.currentTarget)
-    })
-//timestamp,setIntervasl,setTimeout
-    owl.addEventListener('click', (e) => {
-        //gives an object and its properties
-        // console.log(e.timeStamp);//gives time in milliseconds after loading till click
+    owl.addEventListener("click", (e) => {
+      //gives an object and its properties
+      // console.log(e.target.tagName);
+      // console.log(e.currentTarget)
+    });
 
-    //prints each second after click
-        const set_=setInterval(function logCurrentTime() {
-       // console.log(new Date().toLocaleTimeString());
-    },1000)
-    //now close the clock after 10sec
-    setTimeout(()=>{
-            clearInterval(set_)
-        },10000)
+    //timestamp,setIntervasl,setTimeout
+    owl.addEventListener("click", (e) => {
+      //gives an object and its properties
+      // console.log(e.timeStamp);//gives time in milliseconds after loading till click
 
-    })
-//toElement,clientX,screenX,pageX
-        // const body=document.getElementById('body');
-        // body.addEventListener('click',function(e){
-        // const p=document.querySelector(".print");
-        //     let clX=e.clientX;
-        //     let clY=e.clientY;
-        //     let scrX=e.screenX;
-        //     let scrY=e.screenY;
-        //     let pagX=e.pageX;
-        //     let pagY=e.pageY;
-        //     p.innerHTML=`${clX},${clY},${scrX},${scrY},${pagX},${pagY}`;          
-        // })
-//event propagation: 2 type:-> event bubbling(in to out,default false) v/s  event capturing(out to in,default true)
-//now we learn the third optional parameter of addEventListener( (event), (finction) ,(bool) )
+      //prints each second after click
+      //setInterval(fun,timespan,argument)//argument is optional
+      const set_ = setInterval(function logCurrentTime() {
+        // console.log(new Date().toLocaleTimeString());
+      }, 1000);
+      //now close the clock after 10sec
+      setTimeout(() => {
+        clearInterval(set_);
+      }, 10000);
+    });
 
-document.getElementById('images').addEventListener('click', function(e){
-        console.log("clicked inside the ul");
-    }, false)
-document.getElementById('owl').addEventListener('click', function(e){
-        console.log("clicked on owl");
-    }, false)//go and check the order of console log printing
-//stops the bubbling after parent element
-    // document.getElementById('owl').addEventListener('click', function(e){
+    //toElement,clientX,screenX,pageX
+    const body = document.getElementById("body");
+    body.addEventListener("click", function (e) {
+      const p = document.querySelector(".print");
+      let clX = e.clientX;
+      let clY = e.clientY;
+      let scrX = e.screenX;
+      let scrY = e.screenY;
+      let pagX = e.pageX;
+      let pagY = e.pageY;
+      p.innerHTML = `${clX},${clY},${scrX},${scrY},${pagX},${pagY}`;
+    });
+
+    //event propagation: 2 type:-> event bubbling(in to out,default false) v/s  event capturing(out to in,default true)
+    //now we learn the third optional parameter of addEventListener( (event), (finction) ,(bool) )
+
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        // console.log("clicked inside the ul");
+      },
+      false
+    );
+    document.getElementById("owl").addEventListener(
+      "click",
+      function (e) {
+        //console.log("clicked on owl");
+      },
+      false
+    ); //go and check the order of console log printing
+
+    //stops the bubbling after parent element
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
     //     console.log("owl clicked");
-    //     e.stopPropagation()
-    // }, false)
-    
-    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("google").addEventListener(
+    //   "click",
+    //   function (e) {
     //     e.preventDefault();
-    //     e.stopPropagation()
+    //     e.stopPropagation();
     //     console.log("google clicked");
-    // }, false)
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            //we take the parent as then we fet access to the list
-            //else only the image is removed not the total list
-            removeIt.remove()
-            // alter method
-            //removeIt.parentNode.removeChild(removeIt)
+    //   },
+    //   false
+    // );
 
-        }
+    document.querySelector("#images").addEventListener("click", function (e) {
+        e.stopPropagation();
+      console.log(e.target.tagName);
+       if (e.target.tagName === "IMG") {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode;
+        //we take the parent as then we get access to the list
+        //else only the image is removed not the total list
+        removeIt.remove();
 
-    })
-
-</script>
+        // alter method
+        //removeIt.parentNode.removeChild(removeIt)
+       }
+    });
+  </script>
+</html>

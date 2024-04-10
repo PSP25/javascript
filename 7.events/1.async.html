@@ -11,26 +11,26 @@
     <button id="stop">Stop</button>
 </body>
 <script>
- //setTimeout(handler,time)
-                //    setTimeout(function(){
-                //         console.log("hi chai")
-                //    },2000)
+ //setTimeout(handler fun ,time)
+                   setTimeout(function(){
+                        console.log("hi chai")
+                   },2000)
 
-            //change the name for me in h1 after 2 sec
-        //method 1(a little bad )
+    //change the name for me in h1 after 2 sec
+    //method 1(a little bad )
             // setTimeout(function(){
             //     const change=document.querySelector('h1');
             //     change.innerHTML="Pi's code"
             // },2000)
-        //method 2 declare function outside and give reference
+    //method 2 declare function outside and give reference
             const change_text=function(){
                 const change=document.querySelector('h1');
                 change.innerHTML="Pi's code"
             }
-           const changingtxt= setTimeout(change_text,2000);
-        //stop the set_timeout function(clearTimeout(function))
+           const changingtxt= setTimeout(change_text,5000);
+    //stop the set_timeout function(clearTimeout(function))
 
-        //stop it when clicked the button
+    //stop it when clicked the button
         document.querySelector('#stop').addEventListener('click',function(){
             clearTimeout(changingtxt);
             console.log("stopped changing text")
@@ -42,16 +42,3 @@
 
 
 
-<!-- const sayHitesh = function(){
-    console.log("Hitesh");
-}
-const changeText = function(){
-    document.querySelector('h1').innerHTML = "best JS series"
-}
-
-const changeMe = setTimeout(changeText, 2000)
-
-document.querySelector('#stop').addEventListener('click', function(){
-    clearTimeout(changeMe)
-    console.log("STOPPED")
-}) -->
