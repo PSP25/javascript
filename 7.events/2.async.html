@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Chai aur code</h1>
+    <h2>setInterval,clearInterval</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+//basic method
+    // setInterval(function(){
+    //     console.log("pi's code",new Date().toLocaleTimeString())
+    // },3000)
+//method 2 -> by calling function
+
+    const print_text= function(str){
+        console.log(str,new Date().toLocaleTimeString());
+    }
+     
+    const start=document.querySelector('#start').addEventListener('click',function(){
+        const interval=setInterval(print_text,2000,"Pi's Code");
+
+        const stop=document.querySelector('#stop').addEventListener('click',stop_print)
+        function stop_print(){
+            clearInterval(interval); 
+         }
+    });
+    
+
+
+</script>
+</html>
+
+
