@@ -1,5 +1,5 @@
                                         //dates
-//  let myDate = new Date()
+let myDate = new Date();
 // console.log(myDate);
 // console.log(myDate.toISOString());
 // console.log(myDate.toLocaleDateString());
@@ -12,7 +12,7 @@
 // let myCreatedDate = new Date(2023, 0, 23)
 // let myCreatedDate = new Date(2023, 0, 23, 5, 3)
 // let myCreatedDate = new Date("2023-01-14")
-let myCreatedDate = new Date("01-14-2023")
+// let myCreatedDate = new Date("01-14-2023")
 // console.log(myCreatedDate.toLocaleString());
                                         
 // let myTimeStamp = Date.now()// answermilliseconds  
@@ -21,13 +21,13 @@ let myCreatedDate = new Date("01-14-2023")
 // console.log(Math.floor(Date.now()/1000));//convert to seconds
                                         
 let newDate = new Date();
-console.log(newDate);
+// console.log(newDate);
 // console.log(newDate.getMonth() + 1);
-console.log(newDate.getDay());
+// console.log(newDate.getDay());
 // console.log(newDate.getFullYear());
 
                                         
-`${newDate.getDay()} and the time `
+// `${newDate.getDay()} and the time `
  
 
                         //important method for type of format 
