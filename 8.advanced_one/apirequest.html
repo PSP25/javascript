@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API request</title>
+  </head>
+  <body style="background-color: #212121; color: antiquewhite">
+    0 UNSENT Client has been created. open() not called yet. <br />
+    1 OPENED open() has been called. <br />
+    2 HEADERS_RECEIVED send() has been called, and headers and status are
+    available. <br />
+    3 LOADING Downloading; responseText holds partial data. <br />
+    4 DONE The operation is complete.
+    <button class="card">clickMe</button>
+  </body>
+  <script>
+    const requestURL = "https://api.github.com/users/hiteshchoudhary";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestURL); //0	UNSENT	Client has been created. open() not called yet
+    // console.log("here");
+    xhr.send(); //1	OPENED	open() has been called. <br>
+
+    //to know about states changes contineously
+    //also we can acces the datas we got from the reqest
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState===4) {
+        let data=this.responseText;
+        // console.log(typeof data);//returns data in string
+        //need to convert it to json file to access it
+        data=JSON.parse(data);
+        // console.log(typeof data);
+        // console.log(data.followers);
+        const card=document.querySelector('.card')
+        card.addEventListener("click",(e)=>{
+          var div=document.createElement("div")
+          div.style.width="200px"
+          div.style.height="300px"
+          div.style.backgroundColor="brown";
+          document.querySelector("body").appendChild(div);
+          
+          div.innerText=data.followers;
+        })
+
+      }
+    };
+  </script>
+</html>
