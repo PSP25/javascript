@@ -21,8 +21,8 @@ console.log("hello js");
 // let str2="apple";
 // let num1=1;
 // let num2=0;
-// let bool=Boolean(str);
-// console.log(bool);
+// // let bool=Boolean(str);
+// // console.log(bool);
 
 // bool=Boolean(str2);
 // console.log(bool);
@@ -55,18 +55,18 @@ console.log("hello js");
 // console.log(+"");
 
 // let num1, num2, num3
-
 // num1 = num2 = num3 = 2 + 2
+// console.log(num1)
 
-let gameCounter = 100;
-let hello=100
-let prefix=postfix=0;
-prefix=++gameCounter;
-postfix=hello++;
+// let gameCounter = 100;
+// let hello=100;
+// let prefix=postfix=0;
+// prefix=++gameCounter;
+// postfix=hello++;
 
-console.log(prefix);
-console.log(postfix);
-console.log(hello);
+// console.log(prefix);
+// console.log(postfix);
+// console.log(hello);
 
 
 // link to study
