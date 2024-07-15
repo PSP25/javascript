@@ -22,7 +22,7 @@ console.log(id === anotherId);
 // Reference (Non primitive)
 
             // Array, Objects, Functions
-
+            //do check notes very imp note about where to use const
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
     name: "hitesh",
@@ -33,7 +33,7 @@ const myFunction = function(){
     console.log("Hello world");
 }
 
-// console.log(typeof anotherId);
+console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
